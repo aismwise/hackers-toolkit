@@ -5,13 +5,12 @@
   </nav>
 </header>
 <main>
-  <h1 class="title">Hello from {{api.title}}!</h1>
+  <h1 class="title">Welcome to the Hacker's Club!</h1>
 
   <!-- Images (and assets) are parsed and loaded from within the public directory -->
-  <img src="/hackers-toolkit/img/angular.png">
+  <img [src]='url'>
 
   <router-outlet></router-outlet>
 </main>
 <footer>
-  <a [href]="url">Webpack Angular 2 Starter</a>
 </footer>

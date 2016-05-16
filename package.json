@@ -11,7 +11,7 @@
     "watch": "webpack --watch --progress --profile",
     "webpack": "webpack --progress --profile --bail",
     "build": "run-s clean-dist webpack",
-    "rsync": "gsutil -h Cache-Control:no-cache -m rsync -r ./dist/hackers-toolkit/ gs://hackers-toolkit",
+    "rsync": "gsutil -h Cache-Control:no-cache -m cp -r ./dist/* gs://hackers-toolkit",
     "deploy": "run-s clean-cloud build rsync",
     "server": "webpack-dev-server --inline --progress --port 8080",
     "webdriver-update": "webdriver-manager update",

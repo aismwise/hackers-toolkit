@@ -9,7 +9,7 @@ import {AppComponent} from './app/app.component';
 
 const ENV_PROVIDERS = [];
 // depending on the env mode, enable prod mode or add debugging modules
-if (process.env.ENV === 'build') {
+if (process.env.ENV === 'webpack') {
   enableProdMode();
 } else {
   ENV_PROVIDERS.push(ELEMENT_PROBE_PROVIDERS);

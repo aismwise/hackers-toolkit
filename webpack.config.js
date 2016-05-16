@@ -56,8 +56,8 @@ module.exports = function makeWebpackConfig() {
    * Reference: http://webpack.github.io/docs/configuration.html#output
    */
   config.output = isTest ? {} : {
-    path: root('dist/hackers-toolkit'),
-    publicPath: isProd ? '/hackers-toolkit/' : 'http://localhost:8080/hackers-toolkit/',
+    path: root('dist'),
+    publicPath: isProd ? '/hackers-toolkit/' : 'http://localhost:8080/',
     filename: isProd ? 'js/[name].[hash].js' : 'js/[name].js',
     chunkFilename: isProd ? '[id].[hash].chunk.js' : '[id].chunk.js'
   };

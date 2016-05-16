@@ -23,7 +23,7 @@ import '../style/app.scss';
   {path: '/About', component: AboutComponent, name: 'About'}
 ])
 export class AppComponent {
-  url = 'https://github.com/preboot/angular2-webpack';
+  url = process.env.ENV === 'webpack' ? '/hackers-toolkit/img/angular.png' : 'img/angular.png';
 
   constructor(private api: ApiService) {
   }
