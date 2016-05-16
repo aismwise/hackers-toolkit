@@ -15,7 +15,7 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
  */
 var ENV = process.env.npm_lifecycle_event;
 var isTest = ENV === 'test' || ENV === 'test-watch';
-var isProd = ENV === 'build';
+var isProd = ENV === 'webpack';
 
 module.exports = function makeWebpackConfig() {
   /**
@@ -56,8 +56,8 @@ module.exports = function makeWebpackConfig() {
    * Reference: http://webpack.github.io/docs/configuration.html#output
    */
   config.output = isTest ? {} : {
-    path: root('dist'),
-    publicPath: isProd ? '/' : 'http://localhost:8080/',
+    path: root('dist/hackers-toolkit'),
+    publicPath: isProd ? '/hackers-toolkit/' : 'http://localhost:8080/hackers-toolkit/',
     filename: isProd ? 'js/[name].[hash].js' : 'js/[name].js',
     chunkFilename: isProd ? '[id].[hash].chunk.js' : '[id].chunk.js'
   };
